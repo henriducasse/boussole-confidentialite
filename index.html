@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Boussole — Politique de confidentialité</title>
+<style>
+:root{--bg:#fbf8f1;--fg:#1d2a24;--ac:#1F4D3A}
+@media (prefers-color-scheme:dark){:root{--bg:#14201a;--fg:#e8efe9;--ac:#8fc4a8}}
+body{background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,system-ui,sans-serif;margin:0}
+main{max-width:42rem;margin:0 auto;padding:2rem 16px 4rem}
+h1{color:var(--ac)}h2{color:var(--ac);margin-top:2rem}a{color:var(--ac)}
+hr{border:0;border-top:1px solid var(--ac);opacity:.3;margin:3rem 0}
+</style></head><body><main>
+<h1>Boussole — Politique de confidentialité</h1>
+<p>Version courte pour la bêta TestFlight du 26/11/2026. Dernière mise à jour : 19/11/2026. <a href="#en">English version below</a>.</p>
+<h2>En bref</h2>
+<ul>
+<li>Tes données restent sur ton iPhone.</li>
+<li>Pas de compte, pas de serveur Boussole, pas de pistage, pas de publicité.</li>
+<li>Le chat Boussole tourne sur ton iPhone. Tes questions ne sortent pas.</li>
+<li>Une seule connexion à un tiers : le téléchargement, une fois, du modèle du chat, depuis Hugging Face.</li>
+</ul>
+<h2>Qui est responsable</h2>
+<p>Boussole est éditée par Henri Ducasse, Mobility Transition Lab.</p>
+<p>Contact : Henri.m.ducasse@gmail.com</p>
+<h2>Ce que Boussole est</h2>
+<p>Boussole est une aide à l'auto-évaluation du cycle menstruel selon la méthode Sensiplan. Un moteur déterministe calcule des indications de phase à partir des observations saisies. La décision d'agir sur ces indications appartient exclusivement à l'utilisatrice.</p>
+<h2>Les données que tu saisis</h2>
+<p>Tu notes tes températures, saignements, glaire, observations du col, commentaires et dates de cycle. Ce sont des données de santé. Le RGPD (article 9) les classe parmi les données sensibles.</p>
+<p>Boussole les traite uniquement sur ton appareil, pour calculer tes indications et afficher ta courbe. Aucune de ces données n'est envoyée à Boussole, à l'éditeur ou à un tiers.</p>
+<h2>Où elles sont stockées et comment elles sont protégées</h2>
+<ul>
+<li>Les données sont dans une base de données sur ton iPhone, chiffrée avec SQLCipher.</li>
+<li>La clé de chiffrement est créée au premier lancement et rangée dans le Keychain d'iOS, réservée à cet appareil (<code>WHEN_UNLOCKED_THIS_DEVICE_ONLY</code>). Elle n'est lue qu'après un déverrouillage par Face ID ou par le code de l'iPhone.</li>
+<li>La base est exclue de la sauvegarde iCloud.</li>
+<li>La clé ne quitte pas l'iPhone. Si tu changes d'iPhone ou restaures une sauvegarde sans la clé, la base est illisible. Pense à exporter tes données avant (voir plus bas).</li>
+</ul>
+<h2>Ce que Boussole ne fait pas</h2>
+<ul>
+<li>Pas de compte, pas d'identifiant, pas de connexion.</li>
+<li>Pas de serveur Boussole : l'app n'en a pas.</li>
+<li>Pas d'outil de mesure d'audience, pas de pistage, pas de publicité, pas de revente de données. Aucun SDK d'analyse n'est intégré à l'app.</li>
+</ul>
+<h2>Le chat Boussole (modèle Granite d'IBM)</h2>
+<p>Le chat utilise le modèle Granite d'IBM (licence Apache 2.0). Il s'exécute sur ton iPhone. Aucune question et aucune réponse n'est envoyée en ligne. La conversation reste en mémoire : elle s'efface quand tu fermes le chat ou quand l'app se reverrouille, et elle n'est jamais écrite sur le disque.</p>
+<p>Le chat est optionnel. Sans lui, l'app fonctionne entièrement.</p>
+<h2>Le téléchargement du modèle (seule connexion à un tiers)</h2>
+<p>Si tu actives le chat, l'app télécharge le modèle une seule fois, après ton accord. Fichier de 2,2 Go.</p>
+<ul>
+<li>Source : Hugging Face (huggingface.co), dépôt public d'IBM.</li>
+<li>Le fichier est fixé à une version précise (un commit du dépôt) et vérifié par empreinte SHA-256 avant usage. Un fichier qui ne correspond pas est jeté.</li>
+<li>Hugging Face peut voir l'adresse IP de ton iPhone et les informations techniques d'une requête web ordinaire (date, fichier demandé, type d'appareil). Il ne reçoit aucune donnée de cycle, aucune saisie, aucune question.</li>
+<li>Hugging Face a sa propre politique de confidentialité : <a href="https://huggingface.co/privacy">https://huggingface.co/privacy</a></li>
+<li>Le téléchargement peut être mis en pause, repris ou annulé. Tu peux supprimer le modèle dans Réglages, ou en désinstallant l'app.</li>
+</ul>
+<p>C'est la seule fois où l'app contacte un serveur. Hors de ce téléchargement, Boussole n'a pas besoin d'Internet.</p>
+<h2>Export et partage</h2>
+<p>Tu peux exporter tes observations (fichier JSON ou tableur CSV). Le fichier est écrit sur ton iPhone, puis tu choisis où l'envoyer avec la feuille de partage d'iOS. Rien n'est partagé sans ton action. Une fois le fichier envoyé, sa protection dépend de l'endroit où tu l'envoies. Le fichier d'export n'est pas chiffré et ne contient pas la clé.</p>
+<h2>Tes droits</h2>
+<p>Tes données sont sur ton appareil et tu les contrôles.</p>
+<ul>
+<li>Accès et portabilité : exporte-les depuis les réglages.</li>
+<li>Suppression : « Effacer toutes mes saisies » dans les réglages, ou désinstalle l'app. Les données de l'app sont alors supprimées de l'iPhone. Un fichier exporté ou partagé reste à effacer toi-même.</li>
+<li>Retrait de l'accord : « Supprimer le modèle » dans Réglages, ou désinstaller l'app, supprime le modèle du chat.</li>
+</ul>
+<p>L'éditeur ne détient aucune copie de tes données. Il ne peut donc ni les consulter, ni les corriger, ni les effacer pour toi.</p>
+<p>Tu peux aussi saisir la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>) en cas de difficulté.</p>
+<h2>Mineures</h2>
+<p>Boussole n'est pas conçue pour les moins de 16 ans.</p>
+<h2>Changements</h2>
+<p>Si cette politique change, la date en tête change et l'app l'indique à la mise à jour.</p>
+<hr><div id="en">
+<h1>Boussole — Privacy policy</h1>
+<p>Boussole, TestFlight beta, 26 Nov 2026. Last updated 19 Nov 2026.</p>
+<p><strong>Publisher.</strong> Henri Ducasse, Mobility Transition Lab. Contact: Henri.m.ducasse@gmail.com</p>
+<p><strong>Purpose.</strong> Boussole is a self-assessment aid for the menstrual cycle using the Sensiplan method. A deterministic engine computes phase indications from the observations entered. The decision to act on these indications rests solely with the user.</p>
+<p><strong>Your data stays on your iPhone.</strong> Temperatures, bleeding, mucus, cervix observations, notes and cycle dates are health data (special category data, GDPR Art. 9). They are processed only on your device. No account, no Boussole server, no tracking, no advertising, no analytics SDK.</p>
+<p><strong>Protection.</strong> The database is encrypted with SQLCipher. The key is generated at first launch and stored in the iOS Keychain, bound to this device and released only after Face ID or your device passcode. The database is excluded from iCloud backup. If you restore to a new iPhone without the key, the database cannot be read: export first.</p>
+<p><strong>Boussole chat.</strong> The chat uses IBM's Granite model, which runs on your iPhone. No question or answer is sent online. The conversation is kept in memory only and is cleared when you close the chat or the app locks. The chat is optional.</p>
+<p><strong>One download from a third party.</strong> If you enable the chat, your iPhone downloads the 2.2 GB model once, with your consent, from Hugging Face (huggingface.co). The file is pinned to a specific version and verified by SHA-256 before use. Hugging Face can see your IP address and the technical metadata of an ordinary web request. It never receives cycle data, entries or questions. See <a href="https://huggingface.co/privacy">https://huggingface.co/privacy</a>. You can delete the model in Settings, or by uninstalling the app. This is the only time the app contacts a server.</p>
+<p><strong>Export and sharing.</strong> You can export your observations (JSON or CSV). The file is written on your iPhone and you choose where to send it via the iOS share sheet. Nothing is shared without your action. The export file is not encrypted.</p>
+<p><strong>Your rights.</strong> You control your data. Export it from Settings. Delete it with "Effacer toutes mes saisies" in Settings, or by uninstalling the app. The publisher holds no copy, so it cannot access, correct or erase data for you. You may also contact your data protection authority (in France, the CNIL).</p>
+<p><strong>Minors.</strong> Not intended for users under 16.</p>
+</div></main></body></html>
